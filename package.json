@@ -1,7 +1,7 @@
 {
-  "name": "shertu-graph",
+  "name": "uber-graph",
   "version": "1.0.0",
-  "description": "a simple graph lib",
+  "description": "a simple directed graph lib",
   "scripts": {
     "build": "tsc"
   },

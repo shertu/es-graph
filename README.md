@@ -1,15 +1,8 @@
-# es-graph
+# uber-graph
 
 Usage
 
-```
-keytool -import -file <path-to-certificate> -alias localhost -cacerts
-```
-
-The default keystore password is `changeit`
-
-You may need to run the following command and then re-run `aspnetapp`
+```JS
 
 ```
-dotnet dev-certs https --trust
-```
+
