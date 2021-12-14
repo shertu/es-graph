@@ -1,6 +1,6 @@
 {
   "name": "graffin",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "a simple directed graph library with TypeScript support", 
   "main": "dist",
   "devDependencies": {

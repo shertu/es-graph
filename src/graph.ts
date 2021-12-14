@@ -11,28 +11,36 @@ export class Graph<vT extends Vertex, eT extends Edge<vT>> {
     return Object.values(this.v);
   }
 
-  public addVertex(vertex: vT): void {
+  public pushVertex(vertex: vT): void {
     this.v[vertex.id] = vertex;
-    this.eTo[vertex.id] = this.to(vertex);
-    this.eFrom[vertex.id] = this.from(vertex);
+    this.eTo[vertex.id] = this.toVertex(vertex);
+    this.eFrom[vertex.id] = this.fromVertex(vertex);
   }
 
-  public from(vertex: vT): eT[] {
-    return this.eFrom[vertex.id] ?? [];
+  public fromVertex(vertex: vT): eT[] {
+    return this.from(vertex.id);
   }
 
-  public to(vertex: vT): eT[] {
-    return this.eTo[vertex.id] ?? [];
+  public toVertex(vertex: vT): eT[] {
+    return this.to(vertex.id);
   }
 
-  public addEdge(edge: eT): void {
+  public from(vertex: TKey): eT[] {
+    return this.eFrom[vertex] ?? [];
+  }
+
+  public to(vertex: TKey): eT[] {
+    return this.eTo[vertex] ?? [];
+  }
+
+  public pushEdge(edge: eT): void {
     const {vertexTo, vertexFrom} = edge;
 
-    this.addVertex(edge.vertexTo);
-    this.addVertex(edge.vertexFrom);
+    this.pushVertex(edge.vertexTo);
+    this.pushVertex(edge.vertexFrom);
 
-    const edgesTo = this.to(vertexTo);
-    const edgesFrom = this.from(vertexFrom);
+    const edgesTo = this.toVertex(vertexTo);
+    const edgesFrom = this.fromVertex(vertexFrom);
 
     edgesTo.push(edge);
     edgesFrom.push(edge);
