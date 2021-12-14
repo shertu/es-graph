@@ -1,5 +1,5 @@
 {
-  "name": "uber-graph",
+  "name": "gryph-graph",
   "version": "1.0.0",
   "description": "a simple directed graph library with TypeScript support",
   "devDependencies": {
