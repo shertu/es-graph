@@ -3,3 +3,11 @@
 
 # output
 /dist
+
+# pnpm
+package-lock.json
+!/pnpm-lock.yaml
+.pnpm-debug.log
+
+# example
+example.ts

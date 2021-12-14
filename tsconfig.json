@@ -2,7 +2,7 @@
   // https://github.com/tsconfig/bases/blob/main/bases/recommended.json
   "extends": "./node_modules/gts/tsconfig-google.json", 
   "compilerOptions": {
-    "lib": ["dom"],
+    "lib": ["ES2021"],
     "declaration": true,
     "outDir": "dist"
   },

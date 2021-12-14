@@ -1,6 +1,6 @@
-# api-client
+# es-graph
 
-As a superuser, you will need to add the certificate to your Java via:
+Usage
 
 ```
 keytool -import -file <path-to-certificate> -alias localhost -cacerts
