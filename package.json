@@ -1,20 +1,29 @@
 {
   "name": "uber-graph",
   "version": "1.0.0",
-  "description": "a simple directed graph lib",
-  "scripts": {
-    "build": "tsc"
-  },
-  "keywords": [
-    "graph"
-  ],
-  "author": "shertu",
-  "license": "ISC",
+  "description": "a simple directed graph library with TypeScript support",
   "devDependencies": {
     "gts": "^3.1.0",
     "husky": "^7.0.4",
     "prettier": "^2.5.1",
     "typescript": "^4.5.4"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shertu/es-graph.git"
+  },
+  "keywords": [
+    "directed",
+    "graph"
+  ],
+  "author": "shertu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shertu/es-graph/issues"
+  },
+  "homepage": "https://github.com/shertu/es-graph#readme"
 }
-

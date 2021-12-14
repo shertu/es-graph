@@ -1,5 +1,7 @@
 # uber-graph
 
+A simple directed graph library with TypeScript support.
+
 ```JS
 import { Graph } from './uber-graph';
 const graph = new Graph();
