@@ -1,5 +1,5 @@
 {
-  "name": "gryph-graph",
+  "name": "gryph",
   "version": "1.0.0",
   "description": "a simple directed graph library with TypeScript support",
   "devDependencies": {
