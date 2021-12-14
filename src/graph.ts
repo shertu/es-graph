@@ -2,30 +2,30 @@ import {TKey, Vertex} from './graph-vertex';
 
 import {Edge} from './graph-edge';
 
-export class Graph {
-  private v: {[v: TKey]: Vertex} = {};
-  private eTo: {[v: TKey]: Edge[]} = {};
-  private eFrom: {[v: TKey]: Edge[]} = {};
+export class Graph<vT extends Vertex, eT extends Edge<vT>> {
+  private v: {[v: TKey]: vT} = {};
+  private eTo: {[v: TKey]: eT[]} = {};
+  private eFrom: {[v: TKey]: eT[]} = {};
 
-  public get vertex(): Vertex[] {
+  public get vertex(): vT[] {
     return Object.values(this.v);
   }
 
-  public addVertex(vertex: Vertex): void {
+  public addVertex(vertex: vT): void {
     this.v[vertex.id] = vertex;
     this.eTo[vertex.id] = this.to(vertex);
     this.eFrom[vertex.id] = this.from(vertex);
   }
 
-  public from(vertex: Vertex): Edge[] {
+  public from(vertex: vT): eT[] {
     return this.eFrom[vertex.id] ?? [];
   }
 
-  public to(vertex: Vertex): Edge[] {
+  public to(vertex: vT): eT[] {
     return this.eTo[vertex.id] ?? [];
   }
 
-  public addEdge(edge: Edge): void {
+  public addEdge(edge: eT): void {
     const {vertexTo, vertexFrom} = edge;
 
     this.addVertex(edge.vertexTo);

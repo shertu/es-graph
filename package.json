@@ -1,7 +1,8 @@
 {
-  "name": "gryph",
-  "version": "1.0.0",
-  "description": "a simple directed graph library with TypeScript support",
+  "name": "graffin",
+  "version": "1.0.2",
+  "description": "a simple directed graph library with TypeScript support", 
+  "main": "dist",
   "devDependencies": {
     "gts": "^3.1.0",
     "husky": "^7.0.4",
